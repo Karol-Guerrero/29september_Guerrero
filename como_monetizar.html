@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICE 14 SEP</title>
+    
+    <!-- Framework Tailwind CSS para diseño moderno y fluido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        /* Transiciones suaves para interactividad */
+        .btn-custom {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -4px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-custom:active {
+            transform: translateY(0);
+        }
+
+        /* Contenedor adaptativo del iframe */
+        .iframe-container {
+            height: calc(100vh - 220px);
+            min-height: 600px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col p-4 md:p-6 lg:p-8">
+
+    <main class="max-w-7xl w-full mx-auto flex-1 flex flex-col items-center">
+        
+        <!-- Encabezado principal -->
+        <header class="text-center mb-6">
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900">
+                PRACTICE 14 SEP
+            </h1>
+            <p class="text-slate-500 text-sm md:text-base mt-1">
+                Visualización e interacción con diagramas de procesos empresariales
+            </p>
+        </header>
+
+        <!-- Botón estilizado que reemplaza la etiqueta <a> previa -->
+        <div class="mb-6 w-full flex justify-center">
+            <a href="/home/krakatoa/Escritorio/Practices" 
+                class="btn-custom inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold text-sm md:text-base rounded-xl shadow-md cursor-pointer border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                
+                <!-- Icono SVG de carpeta / enlace -->
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                </svg>
+                
+                <span>DIAGRAM OF PRINCIPAL PROCESS OF MY COMPANY</span>
+            </a>
+        </div>
+
+        <!-- Visor de Diagrama Draw.io -->
+        <section class="w-full iframe-container bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+            <iframe 
+                class="w-full h-full border-0" 
+                title="Diagrama de Procesos Principales"
+                src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=&dark=auto#R%3Cmxfile%3E%3Cdiagram%20id%3D%22ipMP6pocCLIbjQk3hxDy%22%20name%3D%22Page-1%22%3E5VtLc6M4EP41rsocsmXEw84x8Ti7PqQ2ta6pPcu4g7UFkkcIP%2FLrVwIBBpzE65UIqTkkQFsI1Pr6U6u7Gbmz5PA7x9vNE1tDPELj9WHkfh8h5DiBKw9KctSSwA8KScTJWstqwZK8ghaOtTQja0gbDQVjsSDbpjBklEIoGjLMOds3m72wuPnULY6gI1iGOO5K%2FyZrsSmkUzSp5X8AiTaiGvFd8UuCy8Z6JOkGr9n%2BROTOR%2B6MMyaKs%2BQwg1hpr9RLcd%2FjG79WL8aBiktuAP8nOc5fOcJiMY%2Byu%2F3kB7519NvCuqOGul8tSlnGQ3inM6TbiWOpPdXtUl9SRuXhYSOSWF458lRPJ%2BYRiHe69Yp2OxxnuttKexJ3wBIQ%2FCgbcIixILvmOLCe%2F6hqV6tInmgt%FQeNobf1czLuOJYAVcPdb4iA5RbnittLI2mqQIJiCwuaSpA3lHIy2AUlIWEjFOBE3UxXqTr8SDPMlXiMQzlolsqzY24HyZaroZK1kgWxfMeHNdnJ00jk3ReiFW9LpDYa7fLXAC7gcDLKrtY3J%2Bifaqjva0txfC3Tvdx6%2BloTwi1yx7ZmamIQ29672GZcbFjEKI7ntfQKqE%2BGBXWT5NCPAstlYyAa9PzeNHg1vQbD0tgl9PoBqXYG9OeL5DGsKFLSbP4L4%2BohHBKSJfLsJsx4mnMo3mH6inPunCk6lTeSFxJiScEUtFAS7FH6GlUbRgVQybdqog9hnKWSj7%2B1CfsqQp10CRWN%2FSahBpPf%2FCalOsgWpXomGSHohRG8YeE7sIHv%2B5go1Cr8Qio4FhBJyKZdCHbcgZt5GmZy4AWSQfoOkOIS5lIf%2BIXxBKffDDoJwRknATWdBHTXchIcx5qTMDWI6EkviEZoUIievK2v6xG9zNKQk23JugVvy81Wxw8%2Bh%2BknoNI7li%2F%2BeE%2FlsWfw3rpuB72%2BJd2XTzKC3tLGbMN3WC5aOWqz%2BH3mLOI4wSV0OUgXRG%FJPsTvgu6IVKMabUKiamsXYZoLV0DhRe0J%2B6blW2QNx8ggjlE%2FOHadQeHY9b6gCt1BqRBdRAV8w5JVlhqJ7YxmaPTwWNi7GpH8oxkU0ZysiPDIBz1eZdDO%2BIxFO22Lbi5V1T3mdWtyJ1x6QLZXqoFFHoMvqMKBWTj6HAufx7VBq2cplyDNXdwVWLVvF7ViA9ZCA65JdLrdSbGy%2FviDQqf7jsaud0UfGM3XE%2FVuaPwd1IafirPJgZtnzNUaBE24Kg2oEMF4CzyVWlfjyJesNe7bA3VaeytkD88mswelo%2FOL4dm1gecZo4LIff0oj7zK%2F0zwPPS1I5eFvFqxhTyEq8O%2FeRBMhD2j%2Bq4vTPsmnbASbJYx7Q%FLCStHbRbTCxpxKBIQHCQYVd9Q7vvhIBQrXwXsk7iDusRVoPgU9XUixAL%2Bz%2BWEJx0vpZXCcD1bJuAZjTR8VVrPb73nHB9PGmwZoSI96flZCU4X31bu3p2OW%2FNRdFnPTvVu%2F2PCjMY1rslCx2SFd4ys%2F2KZXHgiPXdfdxrdwO9%2FGpGVxO59GEraHBWRk9M8bMVoH7Pm7I3UbzvL28wEm6TIM1neys%2BtymbcdqTGViwWWfHa6hT8mX3Ih3P0zFnCqmSQgGTLOI6rfDz%BmYGAT%FPf6hom65PjmUxXej1l4IdV1eQ7X0%2BFZRHdQFToXVTFYD6MtoSC5kMOebw8D0pon9ZmGA3dtStsrO3QTLqnXj%2F1CAPxa9CneKdWqh%2Be80KH8TavUotJCDQkCuosh39CUr0Svh3Aqwp59HJLaCqIyMz7Lhcsj86kaT32inl816D1lJz7a1iPFzStxxv3YD2lig3XDkGUkYQo53JURFBUTjU3BiZNSmRyj4DXcJHj2BYTVngK43l5guR%2Fo2XrKiejBekwWd%2Fr91Hv7w6ru9K3schdUwkpxvpocWvo9CfzDeFVgVORnqorNC7Bt9UuQS3ZN7bplz7eF7PJtzCC7J5d%2FOixkWylcnnEIa6qusb3CeYo8R3ZVB2OioP4aXPrWgtHlHPf3MdkjoVfp7UwUf9ry8tox%2FOCKD7vkZf1BZOFl1N%2BVuvN%2FAQ%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+    </main>
+
+</body>
+</html>
